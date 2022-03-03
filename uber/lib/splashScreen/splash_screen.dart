@@ -43,20 +43,20 @@ class _MySplashScreenState extends State<MySplashScreen> {
   Widget build(BuildContext context) {
     return Material(
       child: Container(
-        color: Colors.black,
+        color: Colors.white,
         child: Center(
           child:Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               // Pour l'ajout d'image, on est d'abord ajouter la ligne (61-62) de du fichier 'pubspec.yam'l 
-              Image.asset("images/logo1.png"),
+              Image.asset("images/logo_off.png"),
               const SizedBox(height: 10,),
     
               const Text(
-                "Uber & inDriver Clone App",
+                "Vite mon Chauffeur",
                 style: TextStyle(
                 fontSize: 24,
-                color: Colors.white,
+                color: Color(0xFF1A237E),
                 fontWeight: FontWeight.bold,
                 ),
               )

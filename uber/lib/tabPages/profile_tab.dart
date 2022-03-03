@@ -15,7 +15,7 @@ class _ProfileTabPageState extends State<ProfileTabPage> {
     return Center(
       child: ElevatedButton(
         child: const Text(
-          "Sign Out",
+          "Deconnexion",
         ),
         onPressed: ()
         {

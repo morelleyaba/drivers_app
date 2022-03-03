@@ -41,7 +41,7 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20.0),
         child: Column(
@@ -55,7 +55,7 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
 
             Padding(
               padding: const EdgeInsets.all(20.0),
-              child: Image.asset("images/logo1.png"),
+              child: Image.asset("images/logo_off.png"),
             ),
 
 
@@ -65,10 +65,10 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
 
 
             const Text(
-              "Write car Detail",
+              "Details du veicule",
               style: TextStyle(
                 fontSize: 24,
-                color: Colors.grey,
+                color: Color(0xFF1A237E),
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -77,24 +77,24 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
             TextField(
               controller: carModelTextEditingController,
               style: const TextStyle(
-                color: Colors.grey,
+                color: Colors.black,
               ),
               decoration: const InputDecoration(
-                labelText: "Car Model",
-                hintText: "Car Model",
+                labelText: "Model",
+                hintText: "Model",
                 enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.grey),
+                  borderSide: BorderSide(color: Color(0xFF1A237E)),
                 ),
                 focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.grey),
+                  borderSide: BorderSide(color: Color(0xFF1A237E)),
                 ),
                 // les styles
                 hintStyle: TextStyle(
-                  color: Colors.grey,
+                  color: Color(0xFF1A237E),
                   fontSize: 10,
                 ),
                 labelStyle: TextStyle(
-                  color: Colors.grey,
+                  color: Color(0xFF1A237E),
                   fontSize: 14,
                 ),
               ),
@@ -104,24 +104,24 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
             TextField(
               controller: carNumberTextEditingController,
               style: const TextStyle(
-                color: Colors.grey,
+                color: Colors.black,
               ),
               decoration: const InputDecoration(
-                labelText: "Car Number",
-                hintText: "Car Number",
+                labelText: "Matricule",
+                hintText: "Matricule",
                 enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.grey),
+                  borderSide: BorderSide(color: Color(0xFF1A237E)),
                 ),
                 focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.grey),
+                  borderSide: BorderSide(color: Color(0xFF1A237E)),
                 ),
                 // les styles
                 hintStyle: TextStyle(
-                  color: Colors.grey,
+                  color: Color(0xFF1A237E),
                   fontSize: 10,
                 ),
                 labelStyle: TextStyle(
-                  color: Colors.grey,
+                  color: Color(0xFF1A237E),
                   fontSize: 14,
                 ),
               ),
@@ -131,24 +131,24 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
             TextField(
               controller: carColorTextEditingController,
               style: const TextStyle(
-                color: Colors.grey,
+                color: Colors.black,
               ),
               decoration: const InputDecoration(
-                labelText: "Car Color",
-                hintText: "Car Color",
+                labelText: "Couleur",
+                hintText: "Couleur",
                 enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.grey),
+                  borderSide: BorderSide(color: Color(0xFF1A237E)),
                 ),
                 focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.grey),
+                  borderSide: BorderSide(color: Color(0xFF1A237E)),
                 ),
                 // les styles
                 hintStyle: TextStyle(
-                  color: Colors.grey,
+                  color: Color(0xFF1A237E),
                   fontSize: 10,
                 ),
                 labelStyle: TextStyle(
-                  color: Colors.grey,
+                  color: Color(0xFF1A237E),
                   fontSize: 14,
                 ),
               ),
@@ -164,10 +164,10 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
                   iconSize: 26,
                   dropdownColor: Colors.white,
               hint: const Text(
-                "Please chose a car Type",
+                "Type du vehicule",
                 style: TextStyle(
                   fontSize: 14.0,
-                  color: Colors.grey,
+                  color: Color(0xFF1A237E),
                 ),
               ),
               value: selectedCarType,
@@ -183,7 +183,7 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
                   child: Text(
                   car,
                   style: const TextStyle(
-                    color: Colors.grey,
+                    color: Colors.black,
                   ),
                 ),
                 value: car,
@@ -207,11 +207,11 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
               },
               // Style du boutton
               style: ElevatedButton.styleFrom(
-                primary: Colors.lightGreenAccent,
+                primary: const Color(0xFFF57F17),
               ),
               // Style du text du boutton
                child: const Text(
-                 "Save Now",
+                 "Envoyer",
                   style: TextStyle(
                     color: Colors.black54,
                     fontSize: 18,

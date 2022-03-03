@@ -141,7 +141,7 @@ _showToast({required String message}) {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20.0),
         child: Column(
@@ -151,14 +151,14 @@ _showToast({required String message}) {
 
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Image.asset("images/logo1.png"),
+              child: Image.asset("images/logo_off.png"),
             ),
 
             const Text(
-              "Login as a Driver",
+              "Se connecter",
               style: TextStyle(
                 fontSize: 24,
-                color: Colors.grey,
+                color: Color(0xFF1A237E),
                 fontWeight: FontWeight.bold,
                 ),
             ),
@@ -168,24 +168,24 @@ _showToast({required String message}) {
               // champ de type email
               keyboardType :TextInputType.emailAddress,
               style: const TextStyle(
-                color: Colors.grey,
+                color: Colors.black,
               ),
               decoration: const InputDecoration(
                 labelText: "Email",
                   hintText: "Email",
                   enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: Color(0xFF1A237E)),
                   ),
                   focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: Color(0xFF1A237E)),
                   ),
                   // les styles
                    hintStyle: TextStyle(
-                    color: Colors.grey,
+                    color: Color(0xFF1A237E),
                     fontSize: 10,
                   ),
                   labelStyle: TextStyle(
-                    color: Colors.grey,
+                    color: Color(0xFF1A237E),
                     fontSize: 14,
                   ),
               ),
@@ -199,24 +199,24 @@ _showToast({required String message}) {
               // masquer le mot de pass
               obscureText: true,
               style: const TextStyle(
-                color: Colors.grey,
+                color: Colors.black,
               ),
               decoration: const InputDecoration(
-                labelText: "Password",
-                  hintText: "Password",
+                labelText: "Mot de pass",
+                  hintText: "Mot de pass",
                   enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: Color(0xFF1A237E)),
                   ),
                   focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: Color(0xFF1A237E)),
                   ),
                   // les styles
                    hintStyle: TextStyle(
-                    color: Colors.grey,
+                    color: Color(0xFF1A237E),
                     fontSize: 10,
                   ),
                   labelStyle: TextStyle(
-                    color: Colors.grey,
+                    color: Color(0xFF1A237E),
                     fontSize: 14,
                   ),
               ),
@@ -233,11 +233,11 @@ _showToast({required String message}) {
               },
               // Style du boutton
               style: ElevatedButton.styleFrom(
-                primary: Colors.lightGreenAccent,
+                primary: const Color(0xFFF57F17),
               ),
               // Style du text du boutton
                child: const Text(
-                 "Login",
+                 "Connexion",
                   style: TextStyle(
                     color: Colors.black54,
                     fontSize: 18,
@@ -247,8 +247,8 @@ _showToast({required String message}) {
  
             TextButton(
               child:const Text(
-                " Not yet an Account ? Sign Up Here",
-                style: TextStyle(color: Colors.grey),
+                "Vous n'avez pas de compte ? Inscrivez vous",
+                style: TextStyle(color: Color(0xFF1A237E)),
               ),
               onPressed: (){
                 // clicker sur le boutton de 'Text' renvoie a notre ecran qui contient le formulaire d'inscription

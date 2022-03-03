@@ -15,7 +15,7 @@ class _EarningsTabPageState extends State<EarningsTabPage> {
   Widget build(BuildContext context) {
     return const Center(
       child: Text(
-        "Earning"
+        "Gain"
       ),
     );
   }
