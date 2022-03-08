@@ -105,13 +105,16 @@ _showToast({required String message}) {
     ).user;
 
     if(firebaseUser != null)
-    {
+    { 
       DatabaseReference driversRef = FirebaseDatabase.instance.ref().child("drivers");
+      // lire les données id[premier enfant "firebaseUser.uid"] au nom de ("firebaseUser.uid") a l'aide de la "once" methode pour verifier si l'id (des données entrés par l'utilisateur) existe dans la base de donnée(peut exister coté "conducteur" comme "client")
       driversRef.child(firebaseUser.uid).once().then((driverKey)
       {
         final snap = driverKey.snapshot;
         if(snap.value != null)
         {
+          // si l'id existe, verifier si il est pareil que celui qui vient de se connecter si c'est pas pareil alors
+          // c'est qu'il est plutot un client, pas autorisé a se connecter la
           currentFirebaseUser = firebaseUser;
           // _showToast(message: "Login Successful."); pas besoin de message de connection validé
           Navigator.push(context, MaterialPageRoute(builder: (c)=> const MySplashScreen()));

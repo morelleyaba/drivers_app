@@ -28,8 +28,13 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
       "car_model": carModelTextEditingController.text.trim(),
       "type": selectedCarType,
     };
-
+    
+    // nous accedons a l'instance de notre database qui va receuillir les données du conducteur("drivers")
+    // nous accedons encore une fois au premier enfant de ("drivers") qui a comme nom l'id de l'utilisateur connecté ("currentFirebaseUser!.uid")
+    // ensuite nous creons un second enfant au nom de ("car_details") auquel on attribue les infos du vehicule du conducteurs concerné "driverCarInfoMap"
+    // 
     DatabaseReference driversRef = FirebaseDatabase.instance.ref().child("drivers");
+    // "currentFirebaseUser!.uid" l'id du conducteur connecté
     driversRef.child(currentFirebaseUser!.uid).child("car_details").set(driverCarInfoMap);
 
     print("Les details du vehicule ont bien été sauvegardés, Felicitation");

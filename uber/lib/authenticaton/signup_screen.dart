@@ -124,8 +124,12 @@ _showToast({required String message}) {
         "phone": phoneTextEditingController.text.trim(),
       };
 
+    // nous accedons a l'instance de notre database qui va receuillir les données du conducteur("drivers")
+    // ensuite creer un premier enfant qui aura comme nom l'id de l'utilisateur qui vient d'etre creé ("firebaseUser.uid")
+    // a ce premier enfant, attribuer notre objet qui contient les infos du conducteur("driverMap") grace a la methode "set"
       DatabaseReference driversRef = FirebaseDatabase.instance.ref().child("drivers");
       driversRef.child(firebaseUser.uid).set(driverMap);
+      // "driverMap" contient les infos du conducteurs
 
       currentFirebaseUser = firebaseUser;
       // _showToast(message: "Le compte a été créé");

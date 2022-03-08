@@ -37,7 +37,7 @@ class _MainScreenState extends State<MainScreen> with SingleTickerProviderStateM
       body: TabBarView(
         physics:const NeverScrollableScrollPhysics(),
         controller: tabController,
-        // Pour la barre de navigation,l'ordre (des 'children:const' et des 'items:const') est importante(les iconnes sur la barre et les pages qui doivent apparaitre quand on click dessus)
+        // Pour la barre de navigation du bas,l'ordre (des 'children:const' et des 'items:const') est importante(les iconnes sur la barre et les pages qui doivent apparaitre quand on click dessus)
         children: const [
           // Les class qui ont été definis et importés depuis le dossiers tabPages
           HomeTabPage(),
@@ -72,6 +72,7 @@ class _MainScreenState extends State<MainScreen> with SingleTickerProviderStateM
         ],
         unselectedItemColor: Colors.white60,
         selectedItemColor: Colors.white,
+        // couleur de la barre
         backgroundColor: Colors.black,
         type: BottomNavigationBarType.fixed,
         selectedLabelStyle: const TextStyle(fontSize: 14),
