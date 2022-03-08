@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:geolocator/geolocator.dart';
 import 'package:uber/models/user_model.dart';
 
 
@@ -34,4 +37,6 @@ UserModel? userModelCurrentInfo;
 //  076 recherche de destination
 // derniere video de la session 13 Oublié de telecharger sur udemy V-430 / Afficher la destination
 // 186 Affichage du tracage du chemin
-//  358 evolution
+//  070 evolution
+
+StreamSubscription<Position>? streamSubscriptionPosition;

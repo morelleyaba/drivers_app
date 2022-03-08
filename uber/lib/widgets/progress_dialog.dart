@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 
-class ProgressDialog extends StatelessWidget
+class ProgressDialog extends StatelessWidget 
 {
   String? message;
   ProgressDialog({Key? key, this.message}) : super(key: key);
@@ -26,7 +26,7 @@ class ProgressDialog extends StatelessWidget
               const SizedBox(width: 6.0,),
 
               const CircularProgressIndicator(
-                valueColor: AlwaysStoppedAnimation<Color>(Colors.green),
+                valueColor: AlwaysStoppedAnimation<Color>(Color(0xFFF57F17)),
               ),
 
               const SizedBox(width: 26.0,),
